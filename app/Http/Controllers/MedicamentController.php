@@ -38,6 +38,29 @@ class MedicamentController extends Controller
         }
         return response(["interactions" => $interactions]);
     }
+    public function check_Minteractions(Request $request)
+    {
+        $Minteractions=Collection::make();
+        if($request->diabete){
+            foreach($request->meds as $med){
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','diabete')->get();
+                if($interaction && $interaction->isNotEmpty()) $Minteractions->push($interaction);
+            }
+        }
+        if($request->InsufisanceRenale){
+            foreach($request->meds as $med){
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','InsufisanceRenale')->get();
+                if($interaction && $interaction->isNotEmpty()) $Minteractions->push($interaction);
+            }
+        }
+        if($request->Grossesse){
+            foreach($request->meds as $med){
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','Grossesse')->get();
+                if($interaction && $interaction->isNotEmpty()) $Minteractions->push($interaction);
+            }
+        }
+        return response(["Minteractions" => $Minteractions]);
+    }
     public function index()
     {
         //

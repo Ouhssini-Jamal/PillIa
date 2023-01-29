@@ -20,6 +20,7 @@ use App\Http\Controllers\MedicamentController;
 //});
 Route::post('/search', [MedicamentController::class, 'search']);
 Route::post('/check', [MedicamentController::class, 'check_interactions']);
+Route::post('/checkmaladies', [MedicamentController::class, 'check_Minteractions']);
 Route::post('/register', [UserController::class, 'store']);
 Route::post('/login', [UserController::class, 'login']);
          
