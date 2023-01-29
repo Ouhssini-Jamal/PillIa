@@ -15,20 +15,18 @@ return new class extends Migration
     {
         Schema::create('medicaments', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_comerial');
+            $table->string('nom_comercial')->unique();
             $table->string('nom_molecule');
-            $table->double('prix', 8, 2);
             $table->timestamps();
         });
         schema::create('interactions', function (Blueprint $table){
             $table->id();
-            $table->unsignedBigInteger('medicament_id1');
-            $table->unsignedBigInteger('medicament_id2');
+            $table->string('medicament1');
+            $table->string('medicament2');
             $table->string('gravite');
-            $table->foreign('medicament_id1')->references('id')->on('medicaments')
-            ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('medicament_id2')->references('id')->on('medicaments')
-            ->onUpdate('cascade')->onDelete('cascade');
+            $table->string('effet');
+            $table->foreign('medicament1')->references('nom_comercial')->on('medicaments')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('medicament2')->references('nom_comercial')->on('medicaments')->onUpdate('cascade')->onDelete('cascade');;
         });
     }
 
