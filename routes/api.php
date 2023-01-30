@@ -18,9 +18,8 @@ use App\Http\Controllers\MedicamentController;
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     //return $request->user();
 //});
-Route::post('/search', [MedicamentController::class, 'search']);
+Route::get('/search/{nom}', [MedicamentController::class, 'search']);
 Route::post('/check', [MedicamentController::class, 'check_interactions']);
-Route::post('/checkmaladies', [MedicamentController::class, 'check_Minteractions']);
 Route::post('/register', [UserController::class, 'store']);
 Route::post('/login', [UserController::class, 'login']);
          
