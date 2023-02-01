@@ -32,7 +32,7 @@
             <ul>
                 <li><a href="">Se Connecter</a></li>
                 <li><a class="btn-s" href="">S'inscrire</a></li>
-                <li><a href="">France</a></li>
+                <li><a href="">Français</a></li>
             </ul>
         </nav>
     </div>
