@@ -15,6 +15,7 @@
 </head>
 <body>
     <form method="post">
+      @crsf
 <div class="register-container">
     <div class="register-text">
         <div class="register-text-ce">
@@ -66,9 +67,9 @@
          <input type="password" id="password">
          <label for="">Vous souhaitez accéder à la version :</label>
          <select  id="user_type">
-            <option value="wlad">wlad l97ab</option>
-            <option value="ZWAML">ZWAML</option>
-            <option value="97AB">97AB</option>
+            <option value="medcin">medcin</option>
+            <option value="pharmacien">pharmacien</option>
+            <option value="individu">individu</option>
          </select>
          <label for="">Code Partenire ( facultatif )</label>
          <input type="text" id="logo">
