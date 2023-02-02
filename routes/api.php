@@ -19,7 +19,7 @@ use App\Http\Controllers\MedicamentController;
     //return $request->user();
 //});
 Route::get('/search/{nom}', [MedicamentController::class, 'search']);
-Route::post('/check', [MedicamentController::class, 'check_interactions']);
+Route::get('/check', [MedicamentController::class, 'check_interactions']);
 Route::post('/register', [UserController::class, 'store']);
 Route::post('/login', [UserController::class, 'login']);
-         
+Route::post('/logout', [UserController::class, 'logout']);

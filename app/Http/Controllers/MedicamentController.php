@@ -17,11 +17,14 @@ class MedicamentController extends Controller
      */
     public function search($nom)
     {
-    $medicaments1 = medicament::where('nom_comercial', 'LIKE',$nom.'%')->orWhere('nom_molecule', 'LIKE',$nom.'%')
+    $medicaments1 = medicament::where('nom_comercial', 'LIKE',$nom.'%')
     ->get();
-    $medicaments2 = medicament::Where('nom_molecule', 'LIKE','%'.'/ '.$nom.'%')
+    $medicaments2 = medicament::Where('nom_molecule', 'LIKE',$nom.'%')
     ->get();
-    $medicaments =  $medicaments1->merge($medicaments2);
+    $medicaments3 = medicament::Where('nom_molecule', 'LIKE','%'.'/ '.$nom.'%')
+    ->get();
+    $medicaments = $medicaments1->merge($medicaments2);
+    $medicaments = $medicaments->merge($medicaments3);
     return response(["medicaments" => $medicaments]);
     }
 
@@ -51,27 +54,27 @@ class MedicamentController extends Controller
 
     public function check_interactions(Request $request)
     {
-        $interactions=Collection::make();
+        $interactions=[];
         for($i=0;$i<count($request->meds);$i++){
             for($j=$i;$j<count($request->meds);$j++){
                 if($i <> $j){
                     $var1 = $request->meds[$i];
                     $var2 = $request->meds[$j];
-                    $interaction1 = DB::table('interactions')->where('medicament1','=',$var1)->where('medicament2','=',$var2)->get();
-                    $interaction2 = DB::table('interactions')->where('medicament1','=',$var2)->where('medicament2','=',$var1)->get();
-                    if($interaction1 && $interaction1->isNotEmpty()) $interactions->push($interaction1);
-                    if($interaction2 && $interaction2->isNotEmpty()) $interactions->push($interaction2);
+                    $interaction1 = DB::table('interactions')->where('medicament1','=',$var1)->where('medicament2','=',$var2)->first();
+                    $interaction2 = DB::table('interactions')->where('medicament1','=',$var2)->where('medicament2','=',$var1)->first();
+                    if($interaction1 && !empty($interaction1)) array_push($interactions, $interaction1);;
+                    if($interaction2 && !empty($interaction2)) array_push($interactions, $interaction2);
                     $interaction1 = null;
                     $interaction2 = null;
                 }
             }
         }
-
         $Minteractions = $this->check_Minteractions($request);
-        return response([
-            "interactions" => $interactions,
-            "Minteractions" => $Minteractions
-    ]);
+    //     [
+    //         "interactions" => $interactions,
+    //         "Minteractions" => $Minteractions
+    // ]
+        return response($interactions);
     }
     
     public function index()

@@ -1,15 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
+    protected $user;
     public function store(Request $request)
     {
       
+        $request->validate([
+            'nom' => 'required|string|regex:/^[a-zA-Z]+$/|max:255',
+            'prenom' => 'required|string|regex:/^[a-zA-Z]+$/|max:255',
+            'email' => 'required|string|unique:users|email|max:255',
+            'user_type' => 'required|string|regex:/^[a-zA-Z]+$/|max:255',
+            'password' => 'required|string|min:8',
+        ]);
         $user = User::create([
             'nom' => $request->nom,
             'prenom' => $request->prenom,
@@ -38,8 +46,15 @@ class UserController extends Controller
             $response = [
                 'user' => $user,
                 'token' => $token
-            ];
-        
+            ]; 
              return response($response, 201);
+    }
+    function logout()
+    {
+        response(201);
+    }
+    function index()
+    {
+         return view('Accueil');
     }
 }

@@ -11,10 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:ital,wght@1,700&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="assets/images/Frame02.png"/>
 
 </head>
 <body>
-    <form action="">
+    <form action="post">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('header')
 <div class="login-container">
   
     <div class="login-box">
@@ -25,13 +28,18 @@
         <button type="submit">Connexion</button>
     </div>
     <div>
-      <p>pas encore de compte <a href="">me connecter</a></p>
+      <p>pas encore de compte <a href="/register">m'inscrire</a></p>
     </div>
 </div>
 </form>
+@include('footer')
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
     let email=$("#email").val();
@@ -44,9 +52,9 @@ $.ajax({
         password:password,},
 
     success: function(response) {
-     
-        localStorage.setItem('token', response.token);
-        window.location.href = '/';
+        console.log(response);
+        window.localStorage.setItem('user', JSON.stringify(response.user));
+        window.location.href = '/Accueil';
     
     },
     error: function(failed) {
