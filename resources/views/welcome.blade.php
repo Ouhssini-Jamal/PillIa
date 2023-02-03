@@ -378,40 +378,6 @@
         <div class="swiper-pagination"></div>
        </div>
     <div class="sixth-part">
-        <div class="covid">
-            <div class="covic-text">
-               <h3>COVID-19</h3>
-               <h1>Des initiatives innovantes</h1>
-               <p>Depuis le début de la crise sanitaire, nos équipes sont 
-               <br>   mobilisées afin de développer des solutions technologiques 
-                <br>     pour faire face au COVID-19.</p>
-            </div>
-            <div class="half">
-
-            </div>
-        </div>
-        <div class="last-banner">
-            <div class="banner-container">
-                <div class="h1-div">
-                <h1>Essayer nos solutions dès maintenant</h1>
-               
-            </div>
-                <div class="banner-items">
-                    <div class="banner-item">
-                        <h2>Goodmed</h2>
-                        <a href="">Télecharger l application</a>
-                    </div>
-                    <div class="banner-item">
-                        <h2>Goodmed</h2>
-                        <a href="">Télecharger l application</a>
-                    </div>
-                    <div class="banner-item">
-                        <h2>Goodmed</h2>
-                        <a href="">Télecharger l application</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     @include('footer')
     <script src="js/javascript.js"></script>

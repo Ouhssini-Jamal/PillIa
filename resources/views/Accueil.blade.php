@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="assets/images/Frame02.png"/>
     <title>Page Title</title>
 </head>
-<body onload="userinit()">
-
+<body>
   <header>
     <nav>
       <ul>
@@ -65,7 +64,7 @@
     const nom = e.target.value;
     if(nom == '')  searchInput.classList.remove("active");
     else{
-        $(resultBox).empty();
+      $(resultBox).empty();
          $.ajax({
             type:'GET',
             url:'/api/search/'+nom,
@@ -75,10 +74,11 @@
                 if (response.medicaments.length){
                     searchInput.classList.add("active");
                     for (let i = 0; i < response.medicaments.length; i++){
+                      console.log(response.medicaments.length);
                         $(resultBox).append('<li onclick="addinputmed(event)" id ="'+response.medicaments[i].nom_comercial+'">'+response.medicaments[i].nom_comercial+'('+response.medicaments[i].nom_molecule+')<li>');
                     }
                 }
-            }
+        }
   });
 }
 });
@@ -106,7 +106,7 @@ $(".verifier").click(function(e){
                meds :meds,
               },
              success:function(response){
-              console.log(response);
+              console.log(response.interactions);
             }
   });
 });
@@ -134,11 +134,14 @@ function userinit(){
   const userspan = document.querySelector("#user");
   var user = JSON.parse(window.localStorage.getItem('user'));
   if(!user) {
-    window.location.href = '/login';
+    window.location.replace('/login');
   }
   $("#user").append('<span>'+user.nom+'</span>');
 }
-
+window.addEventListener('load', function() {
+  userinit();
+});
+</script>
 </script>
 </body>
 </html>

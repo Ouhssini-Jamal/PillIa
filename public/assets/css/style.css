@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 * {
   padding: 0%;
   margin: 0%;
@@ -418,6 +419,9 @@ box-shadow: 2px 2px 44px 7px rgba(0,0,0,0.46);
   justify-content: center;
   padding-bottom: 130px;
 }
+.register-container{
+  background-color: #E0F5FF;
+}
 .register-text h1{
   font-size: 40px;
   
@@ -451,6 +455,7 @@ box-shadow: 2px 2px 44px 7px rgba(0,0,0,0.46);
   justify-content: space-between;
   margin-bottom: 50px;
 }
+
 .item-img{
   width: 100px;
   height: 100px;
@@ -520,15 +525,19 @@ box-shadow: 2px 2px 44px 7px rgba(0,0,0,0.46);
 }
 .banner-items{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 95%;
  
 }
-
+.slider-part {
+  padding-bottom: 10px;
+}
 .banner-item{
   height: 50px;
   width: 30%;
   background-color: #ffffff;
   border-radius: 10px;
+  margin-right: 20px;
 }
 footer{
   width: 100%;
