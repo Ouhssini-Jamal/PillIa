@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="./style.css" rel="stylesheet">
+    <link href="assets\css\acceuil.css" rel="stylesheet">
     <link rel="stylesheet" href="https://kit.fontawesome.com/3bce00c912.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3bce00c912.js" crossorigin="anonymous"></script>
     <title>Medecin Interface!</title>
@@ -234,8 +234,8 @@
         </div>
         <div class="card-body">
           
-          <p class="card-text" style="text-align:centre;"><img src="C:\Users\hp\Downloads\Icon login\Icon login\verified.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
-          <p>Entrer au moins deux medicaments!!</p>
+          <p class="card-text" style="text-align:centre;"><img src="C:\Users\hp\Documents\GitHub\pillula\public\assets\images\verified.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
+          <p>Entrer au moins deux medicaments!!</p>\
           <br>
           <p>             </p>
           <br>

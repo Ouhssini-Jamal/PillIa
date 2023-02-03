@@ -673,25 +673,6 @@ margin-bottom: 20px;
     cursor: pointer;
   }
 
-  
-
-body{
-  background-color: #E0F5FF;
-}
-
-.but-foot{
-  display: flex;
-  
-}
-
-a:active{
-  border-bottom: chocolate;
-}
-
-.navbar{
-  background-color: #003753;
-  color: #003753 !important;
-}
 
 
 
