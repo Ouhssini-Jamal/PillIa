@@ -234,7 +234,7 @@
         </div>
         <div class="card-body">
           
-          <p class="card-text" style="text-align:centre;"><img src="C:\Users\hp\Documents\GitHub\pillula\public\assets\images\verified.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
+          <p class="card-text" style="text-align:centre;"><img src="assets\images\verified.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
           <p>Entrer au moins deux medicaments!!</p>\
           <br>
           <p>             </p>
