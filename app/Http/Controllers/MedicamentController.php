@@ -33,20 +33,20 @@ class MedicamentController extends Controller
         $Minteractions=Collection::make();
         if($request->Diabete){
             foreach($request->meds as $med){
-                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','diabete')->get();
-                if($interaction && $interaction->isNotEmpty()) $Minteractions->push($interaction);
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','Diabete')->first();
+                if($interaction && !empty($interaction)) $Minteractions->push($interaction);
             }
         }
         if($request->InsufisanceRenale){
             foreach($request->meds as $med){
-                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','InsufisanceRenale')->get();
-                if($interaction && $interaction->isNotEmpty()) $Minteractions->push($interaction);
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','InsufisanceRenale')->first();
+                if($interaction &&  !empty($interaction)) $Minteractions->push($interaction);
             }
         }
         if($request->Grossesse){
             foreach($request->meds as $med){
-                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','Grossesse')->get();
-                if($interaction && $interaction->isNotEmpty()) $Minteractions->push($interaction);
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','Grossesse')->first();
+                if($interaction && !empty($interaction)) $Minteractions->push($interaction);
             }
         }
         return $Minteractions;
@@ -70,11 +70,11 @@ class MedicamentController extends Controller
             }
         }
         $Minteractions = $this->check_Minteractions($request);
-    //     [
-    //         "interactions" => $interactions,
-    //         "Minteractions" => $Minteractions
-    // ]
-        return response($interactions);
+        
+        return response([
+            "interactions" => $interactions,
+            "Minteractions" => $Minteractions
+     ]);
     }
     
     public function index()

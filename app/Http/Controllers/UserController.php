@@ -55,6 +55,6 @@ class UserController extends Controller
     }
     function index()
     {
-         return view('Accueil');
+         return view('Acc');
     }
 }

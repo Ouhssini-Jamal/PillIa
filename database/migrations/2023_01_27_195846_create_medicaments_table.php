@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('nom_comercial')->unique();
             $table->string('nom_molecule');
+            $table->double('dosage');
+            $table->string('unite_dosage');
+            $table->double('prix');
             $table->timestamps();
         });
         schema::create('interactions', function (Blueprint $table){

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('medicament');
             $table->string('maladie');
             $table->string('effet');
+            $table->string('alternatif');
             $table->foreign('medicament')->references('nom_comercial')->on('medicaments')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
