@@ -28,7 +28,7 @@
         <a class="navbar-brand" href="#" style=" color: white;  text-decoration-line: underline  ">Logo</a>
         <a class="navbar-brand" href="" style=" color: white;   text-decoration: underline solid #93E3A9 50%;  ">Analyse de perscription</a>
         <a class="navbar-brand" href="#" style=" color: white;">Monographies de medicaments</a>
-        
+
         <div class="dropdown">
         <a><i class="bi bi-person" style="font-size: 60px; color: rgb(253, 253, 252);"></i></a>
              <div class="dropdown-content">
@@ -243,16 +243,16 @@
        <br>
        <p>Remarque : les résultats que vous obtenez dépendent des informations que vous saisissez (médicaments et profil du patient)</p>
         </div>
-        <div class="card-body interactions_container">
+        <div class="card-body interactions_container row" style="padding-bottom: 90px;">
           
-          <p class="card-text" style="text-align:centre;"><img src="assets\images\verified.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
+          <p class="card-text" style="text-align:centre;"><img src="assets\images\verified.png" width=10% height=50% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
           <p>Entrer au moins deux medicaments!!</p>
           <br>
           <p>             </p>
           <br>
           <p>             </p>
           <br>
-          
+        
         </div>
       </div>
       
@@ -341,11 +341,12 @@
                             }else{
                                 $(interactions_container).empty();
                               for(let i = 0 ; i < response.interactions.length; i++ ){
-                                $(interactions_container).append('<div class="card text-center" style="padding-bottom: 90px;"> <div class="card-body"> <p class="card-text" style="text-align:centre;"> <div class="container" style="flex-direction: column;  align-items: center;"> <h4>'+response.interactions[i].medicament1+' VS '+response.interactions[i].medicament2+'</h4> <p class="card-text" style="text-align:centre;"><img src="assets/images/x.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p> <h6>Attention !!! une interaction a été Detectée</h6> <br> <h6>Effet:</h6> <h6>'+response.interactions[i].effet+'</h6> </div> </div>');
+                                $(interactions_container).append('<div class="card-body col-3 inter"> <p class="card-text" style="text-align:centre;"> <div class="container" style="flex-direction: column;  align-items: center;"> <h4>'+response.interactions[i].medicament1+' VS '+response.interactions[i].medicament2+'</h4> <p class="card-text" style="text-align:centre;"><img src="assets/images/x.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p> <h6>Attention !!! une interaction a été Detectée</h6> <br> <h6>Effet:</h6> <h6>'+response.interactions[i].effet+'</h6> </div>');
                               }  
                             }
                             if(response.Minteractions.length){
                                 console.log(response.Minteractions);
+                                
                             }
                           }
                 });
