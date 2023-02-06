@@ -49,6 +49,12 @@ class MedicamentController extends Controller
                 if($interaction && !empty($interaction)) $Minteractions->push($interaction);
             }
         }
+        if($request->FibrillationAuriculaire){
+            foreach($request->meds as $med){
+                $interaction = DB::table('interactions_maladies')->where('medicament','=',$med)->where('maladie','=','FibrillationAuriculaire')->first();
+                if($interaction && !empty($interaction)) $Minteractions->push($interaction);
+            }
+        }
         return $Minteractions;
     }
 

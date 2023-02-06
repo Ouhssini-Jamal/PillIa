@@ -23,3 +23,4 @@ Route::get('/check', [MedicamentController::class, 'check_interactions']);
 Route::post('/register', [UserController::class, 'store']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/setting', [UserController::class, 'upload_logo']);

@@ -11,5 +11,7 @@ class Medicament extends Model
     protected $fillable = [
         'nom_comerial',
         'nom_molecule',
+        'remb',
+        'prix',
     ];
 }

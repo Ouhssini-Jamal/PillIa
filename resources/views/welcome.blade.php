@@ -12,85 +12,81 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:ital,wght@1,700&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="assets/images/Frame02.png"/>
+
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="assets\css\acceuil.css" rel="stylesheet">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3bce00c912.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
-    <title>Document</title>
+
+
+    <title>home</title>
 </head>
 
 <body>
-@include('header')
-    <section class="home-section">
+
+
+
+<nav class="navbar mx-auto " style="height: 80px !important;  box-shadow: 10px 10px;background-color:#f4e0dc;box-shadow: 0px 1px 5px rgb(0 0 0);">
+            <div>
+                <div >
+            <a><img src="assets/images/LOGO.png" style="position: absolute; width: 10%;margin-left: 20px; margin-top: 10px;" ></a>
+            <a class="navbar-brand"  style="color: black;margin-left: 1000px;margin-top: 10px;text-decoration: bold;" href="/login" >se connecter</a>
+            <a class="navbar-brand"  style="color: white;margin-left: 100px;background-color: #EA6E58;padding: 5PX;border-radius: 10PX;" href="/register" >S'inscrire</a>
+            
+
+            <div class="dropdown">
+       <div class="dropdown-content">
+          
+      </div>
+  </div>
+        </div>
+        </div>
+        </nav>
+
+    <section class="home-section" style="background-color:#01010F">
         <div class="intro-text">
-            <h1>Accédez à une <br>information <br>fiable sur les <br>médicaments</h1>
-            <p>Nous permettons chaque jour à des milliers de <br>professionnels de santé et de particuliers l’accès à
-                une <br>information fiable et utile sur les médicaments.</p>
+           <h1 style="color:#0FB7B4 ; margin-top:60px;">Des Prescriptions <br>       plus intelligentes</h1><br>
+            <p>Nous permettons chaque jour à des milliers de professionnels de santé<br> et de particuliers l’accès à
+                une information fiable et utile sur les médicaments</p>
             <div class="commencer">
-                <a class="btn-comm" href="">Commencer</a>
+                <a class="btn-comm" href=""  style="color:#FFFFFFFF ">Commencer</a>
                 <div class="next-div"><a href=""><i class="fa-solid fa-arrow-right next-icon"></a></i>
                 </div>
             </div>
         </div>
         <div class="home-photo">
-            <img src="assets/images/Frame02.png" alt="">
+            <!--img src="assets/images/vid.gif" alt=""-->
+            <!--video autoplay muted loop id="myVideo" style="position:absolute; margin-right: 1000px; position: absolute;width: 700PX; margin-left: 0px;height: fit-content;">
+  <source src="assets/images/vid.mp4" type="video/mp4">
+</video-->
         </div>
     </section>
 
 
 
 
-    <section class="second-parte">
-        <div class="ibnzohr-div">
+    <section class="second-parte" style="background-color:#f4e0dc">
+        <div class="ibnzohr-div" style="background-color:#f4e0dc">
             <img src="assets/images/logoIBN.png" alt="">
         </div>
-        <div class="content">
-            <img src="assets/images/Vectore1.png" alt="" class="bg-img">
-            <div class="text-second second-parte-txt">
-                <h4>NOTRE MISSION</h4>
-                <h2>
-                    Permettre à tous l'accès à une <br>
-                    information fiable et utile sur les <br>
-                    médicaments
-                </h2>
-                <p>
-                    Pour prévenir et réduire les risques médicamenteux sur <br>
-                    l'ensemble du parcours de soin, partout dans le monde.
-                </p>
-            </div>
-            <div class="cards-container">
-                <div class="box"><img src="assets/images/ambulance.png" alt="">
-                    <h2>10 000 à 30 000</h3>
-                        <P>décès/an attribuables à <br> un mauvais usage des <br> médicaments¹</P>
-                </div>
-                <div class="box"><img src="assets/images/hospital-bed.png" alt="">
-                    <h2>85 000 à 180 000</h2>
-                    <p>hospitalisations* dues à des <br> effets indésirables <br> médicamenteux (EIM) chaque <br>
-                        année¹
-                    </p>
-                </div>
-                <div class="box"><img src="assets/images/medical.png" alt="">
-                    <h2>50%</h2>
-                    <p>de ces hospitalisations sont <br> évitables¹</p>
-                </div>
-                <div class="box"><img src="assets/images/medical-research.png" alt="">
-                    <h2>1,2 milliards d'€/an</h2>
-                    <p>surcoût évitable lié aux EIM²</p>
-                </div>
-            </div>
-            <div class="text-last second-parte-txt">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium vel et
-                    praesentium debitis quasi adipisci eaque fugiat sed maxime obcaecati aliquid exercitationem, illo
-                    fugit unde sint suscipit hic deleniti.
-                </p>
-            </div>
-        </div>
 
     </section>
-    <div class="third-section">
+    <div class="third-section"  style="background-color:#f4e0dc">
       <div class="upper-part">
        <div class="text-1">
-          <h4>SOLUTIONS</h4>
-          <h2>Pillula Plateforme, des 
+          <h4 style="color:#EA6E58;">SOLUTIONS</h4>
+          <h2>PILLia Plateforme, des 
            <br> solutions unifiées</h2>
            <p>Nous avons développé des solutions innovantes pour intégrer la
 
@@ -108,18 +104,18 @@
             </div>
         </div>
         <div class="img-1">
-            <img src="assets/images/Image01.jpg" alt="">
+            <img src="assets/images/online-pharmacy.png" alt="">
         </div>
           
       </div>
       <div class="upper-part">
         <div class="img-1">
-            <img src="assets/images/ImageArticle.png" alt="">
+            <img src="assets/images/Vector.png" alt="">
         </div>
           
         <div class="text-1">
            <h4>SOLUTIONS</h4>
-           <h2>Pillula Plateforme, des 
+           <h2>PILLia Plateforme, des 
             <br> solutions unifiées</h2>
             <p>Nous avons développé des solutions innovantes pour intégrer la
  
@@ -140,8 +136,8 @@
        </div>
        <div class="upper-part">
         <div class="text-1">
-           <h4>SOLUTIONS</h4>
-           <h2>PILLULA Plateforme, des 
+           <h4 style="color:#EA6E58;">SOLUTIONS</h4>
+           <h2>PILLia Plateforme, des 
             <br> solutions unifiées</h2>
             <p>Nous avons développé des solutions innovantes pour intégrer la
  
@@ -155,84 +151,74 @@
              
          </div>
          <div class="img-1">
-             <img src="assets/images/app.png" alt="">
+             <img src="assets/images/gift.png" alt="">
          </div>
            
        </div>
     </div>
-    <section class="fourth-section">
-     <div class="text-3">
-       <h2>Les piliers de notre plateforme 
-        <br> de Medication Intelligence</h2>
-     </div>
-     <div class="info-banner">
-        <div class="child">
-            <div class="image-c">
-             <img src="assets/images/online-pharmacy.png" alt="">
-            </div>
-            <h3>Information médicamenteuse fiable et
-            <br> actualisée en temps réel</h3>
-            <p>Uniquement basée sur des sources officielles et 
-            <br> 100% indépendantes.</p>
-        </div>
-        <div class="child">
-              <div class="image-c">
-                <img src="assets/images/id-card.png" alt="">
-               </div>
-            <h3>Information médicamenteuse fiable et
-            <br> actualisée en temps réel</h3>
-            <p>Uniquement basée sur des sources officielles et 
-            <br> 100% indépendantes.</p>
-        </div>
-        <div class="child">
-            <div class="image-c">
-                <img src="assets/images/cpu.png" alt="">
-               </div>
-            <h3>Information médicamenteuse fiable et
-            <br> actualisée en temps réel</h3>
-            <p>Uniquement basée sur des sources officielles et 
-            <br> 100% indépendantes.</p>
-        </div>
-        <div class="child">
-            <div class="image-c">
-                <img src="assets/images/gift.png" alt="">
-               </div>
-            <h3>Information médicamenteuse fiable et
-            <br> actualisée en temps réel</h3>
-            <p>Uniquement basée sur des sources officielles et 
-            <br> 100% indépendantes.</p>
-        </div>
-        <div class="child">
-            <div class="image-c">
-                <img src="assets/images/file.png" alt="">
-               </div>
-            <h3>Information médicamenteuse fiable et
-            <br> actualisée en temps réel</h3>
-            <p>Uniquement basée sur des sources officielles et 
-            <br> 100% indépendantes.</p>
-        </div>
-        <div class="child">
-            <div class="image-c">
-                <img src="assets/images/certificate.png" alt="">
-               </div>
-            <h3>Information médicamenteuse fiable et
-            <br> actualisée en temps réel</h3>
-            <p>Uniquement basée sur des sources officielles et 
-            <br> 100% indépendantes.</p>
-        </div>
-     </div>
+    
     </section>
-    <div class="fifth-section">
-        <div class="text-4">
-         <h1>Des acteurs majeurs de la santé 
-           <br> nous font confiance</h1>
-        </div>
+    <div class="fifth-section"style="background-color:#f4e0dc" >
         <div class="slider-part">
           <div class="swiper mySwiper">
          <div class="swiper-wrapper">
              <div class="swiper-slide">
                 <div class="first">
                     <div class="img-3">
+                        <img src="assets/images/iconmedical.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="sec">
+                    Notre société Mesdocteurs édite un
+                   <br> logiciel de télémédecine qui utilise 
+                   <br> PILLia comme module de
+                   <br> prescription. Ce service rendu à nos
+                   <br> utilisateurs médecins est 
+                   <br> particulièrement apprécié car il permet
+                   <br> de sécuriser les ordonnances qui    
+                   <br> transitent par notre plateforme
+                </div>
+             </div>
+             <div class="swiper-slide">
+                <div class="first">
+                    <div class="img-3">
+                        <img src="assets/images/iconmorocco.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="sec">
+                    Notre société Mesdocteurs édite un
+                   <br> logiciel de télémédecine qui utilise 
+                   <br> PILLia comme module de
+                   <br> prescription. Ce service rendu à nos
+                   <br> utilisateurs médecins est 
+                   <br> particulièrement apprécié car il permet
+                   <br> de sécuriser les ordonnances qui    
+                   <br> transitent par notre plateforme
+                </div>
+             </div>
+             <div class="swiper-slide">
+                <div class="first">
+                    <div class="img-3">
+                        <img src="assets/images/icondrugs.png" alt="">
+                    </div>
+                
+                </div>
+                <div class="sec">
+                    Notre société Mesdocteurs édite un
+                   <br> logiciel de télémédecine qui utilise 
+                   <br> PILLia comme module de
+                   <br> prescription. Ce service rendu à nos
+                   <br> utilisateurs médecins est 
+                   <br> particulièrement apprécié car il permet
+                   <br> de sécuriser les ordonnances qui    
+                   <br> transitent par notre plateforme
+                </div>
+             </div>
+             <div class="swiper-slide"  style="background-color:#f4e0dc">
+                <div class="first">
+                    <div class="img-3">
                         <img src="assets/images/add-image.png" alt="">
                     </div>
                     <div>
@@ -242,7 +228,7 @@
                 <div class="sec">
                     Notre société Mesdocteurs édite un
                    <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
+                   <br> PILLia comme module de
                    <br> prescription. Ce service rendu à nos
                    <br> utilisateurs médecins est 
                    <br> particulièrement apprécié car il permet
@@ -262,7 +248,7 @@
                 <div class="sec">
                     Notre société Mesdocteurs édite un
                    <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
+                   <br> PILLia comme module de
                    <br> prescription. Ce service rendu à nos
                    <br> utilisateurs médecins est 
                    <br> particulièrement apprécié car il permet
@@ -282,7 +268,7 @@
                 <div class="sec">
                     Notre société Mesdocteurs édite un
                    <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
+                   <br> PILLia comme module de
                    <br> prescription. Ce service rendu à nos
                    <br> utilisateurs médecins est 
                    <br> particulièrement apprécié car il permet
@@ -299,70 +285,10 @@
                         <h2>Marie-Laure Saillard</h2>
                      </div>
                 </div>
-                <div class="sec">
+                <div class="sec" style="background-color:#EA6E58">
                     Notre société Mesdocteurs édite un
                    <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
-                   <br> prescription. Ce service rendu à nos
-                   <br> utilisateurs médecins est 
-                   <br> particulièrement apprécié car il permet
-                   <br> de sécuriser les ordonnances qui    
-                   <br> transitent par notre plateforme
-                </div>
-             </div>
-             <div class="swiper-slide">
-                <div class="first">
-                    <div class="img-3">
-                        <img src="assets/images/add-image.png" alt="">
-                    </div>
-                    <div>
-                        <h2>Marie-Laure Saillard</h2>
-                     </div>
-                </div>
-                <div class="sec">
-                    Notre société Mesdocteurs édite un
-                   <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
-                   <br> prescription. Ce service rendu à nos
-                   <br> utilisateurs médecins est 
-                   <br> particulièrement apprécié car il permet
-                   <br> de sécuriser les ordonnances qui    
-                   <br> transitent par notre plateforme
-                </div>
-             </div>
-             <div class="swiper-slide">
-                <div class="first">
-                    <div class="img-3">
-                        <img src="assets/images/add-image.png" alt="">
-                    </div>
-                    <div>
-                        <h2>Marie-Laure Saillard</h2>
-                     </div>
-                </div>
-                <div class="sec">
-                    Notre société Mesdocteurs édite un
-                   <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
-                   <br> prescription. Ce service rendu à nos
-                   <br> utilisateurs médecins est 
-                   <br> particulièrement apprécié car il permet
-                   <br> de sécuriser les ordonnances qui    
-                   <br> transitent par notre plateforme
-                </div>
-             </div>
-             <div class="swiper-slide">
-                <div class="first">
-                    <div class="img-3">
-                        <img src="assets/images/add-image.png" alt="">
-                    </div>
-                    <div>
-                        <h2>Marie-Laure Saillard</h2>
-                     </div>
-                </div>
-                <div class="sec">
-                    Notre société Mesdocteurs édite un
-                   <br> logiciel de télémédecine qui utilise 
-                   <br> Pillula comme module de
+                   <br> PILLia comme module de
                    <br> prescription. Ce service rendu à nos
                    <br> utilisateurs médecins est 
                    <br> particulièrement apprécié car il permet
@@ -377,7 +303,7 @@
         </div>
         <div class="swiper-pagination"></div>
        </div>
-    <div class="sixth-part">
+    <div class="sixth-part" >
     </div>
     @include('footer')
     <script src="js/javascript.js"></script>

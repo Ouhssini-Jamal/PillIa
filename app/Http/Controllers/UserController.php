@@ -49,12 +49,31 @@ class UserController extends Controller
             ]; 
              return response($response, 201);
     }
-    function logout()
+
+    public function upload_logo(Request $request)
     {
-        response(201);
+        //$request->validate([
+           // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+       // ]);
+        //$imageName = time().'.'.$request->image->extension();  
+       // $request->image->move(public_path('assets/images/logos'), $imageName);
+       // $request->user->logo = $imageName;
+       // $request->user->save();
+        //return response(201);
+        $image = $request->file('image');
+        $imageName = time().'.'.$image->extension();
+        $image->move(public_path('assets/images'), $imageName);
+        $request->user->logo = $imageName;
+        $request->user->save();
+        return response()->json(['success' => true, 'imageName' => $imageName]);
     }
     function index()
     {
          return view('Acc');
+    }
+    function print_ord(Request $request)
+    {
+        $meds = $request->meds;
+         return view('ordonnance',compact('meds'));
     }
 }

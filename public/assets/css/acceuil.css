@@ -12,8 +12,7 @@ body{
   }
   
   .navbar{
-    background-color: #003753;
-    color: #003753 !important;
+    color: #f4e0dc!important;
   }
 
   .searchInput{
@@ -79,8 +78,8 @@ body{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     right: 1px;
-    margin-top: -15px;
     background-color: aliceblue;
+    border-radius: 10%;
   }
   
   .dropdown-content a {
@@ -88,6 +87,7 @@ body{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-radius: 10px;
   }
   
   .dropdown-content a:hover {background-color: #ddd;}
@@ -99,4 +99,8 @@ body{
     border-radius: 10px;
     box-shadow: 2px 2px 5px gray;
     margin: 10px;
+    background-color: antiquewhite;
+  }
+  body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
   }

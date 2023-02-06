@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrdonnanceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +25,11 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/Settings', function () {
+    return view('settings');
+});
 Route::group(['middleware' => 'auth:sanctum'], function(){
     //All secure URL's
     });
 Route::get('/Accueil',[UserController::class, 'index']);
+Route::get('/ordonnance', [UserController::class, 'print_ord']);

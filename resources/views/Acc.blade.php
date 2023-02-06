@@ -12,7 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="assets\css\acceuil.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/3bce00c912.css" crossorigin="anonymous">
      <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -20,26 +19,25 @@
     <script src="https://kit.fontawesome.com/3bce00c912.js" crossorigin="anonymous"></script>
     <title>Medecin Interface!</title>
   </head>
-  <body>
+  <body  style="background-color:#f4e0dc;">
     
     
     <!-- As a link -->
-    <nav class="navbar " style="height: 80px !important;">
-        <a class="navbar-brand" href="#" style=" color: white;  text-decoration-line: underline  ">Logo</a>
-        <a class="navbar-brand" href="" style=" color: white;   text-decoration: underline solid #93E3A9 50%;  ">Analyse de perscription</a>
-        <a class="navbar-brand" href="#" style=" color: white;">Monographies de medicaments</a>
-
-        <div class="dropdown">
-        <a><i class="bi bi-person" style="font-size: 60px; color: rgb(253, 253, 252);"></i></a>
-             <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
+    <nav class="navbar mx-auto " style="height: 80px !important;  box-shadow: 10px 10px;background-color:#f4e0dc;box-shadow: 0px 1px 5px rgb(0 0 0);">
+            <div>
+                <div >
+            <a><img src="assets/images/LOGO.png" style="position: absolute; width: 10%;margin-left: 20px; margin-top: 10px;" ></a>
+            <a class="navbar-brand" href="" style=" color: #EA6E58;  margin-left: 300px; margin-top: 10px;">Analyse de perscription</a>
+            <a class="navbar-brand" href="#" style=" color: #EA6E58; margin-left: 300px;">Monographies de medicaments</a>
+            <div class="dropdown">
+       <div class="dropdown-content">
+          <a href="/Settings">Paramètres</a>
+          <a href="" id ="logout" >Se déconnecter</a>
+      </div>
+  </div>
         </div>
-      
-
-    </nav>
+        </div>
+        </nav>
     
     <form action="get">
     <div class="p-4" >
@@ -77,7 +75,7 @@
                             </select>
                         </div>
                         <div >
-                            <button class="btn"><i class="bi bi-printer mr-1"></i>Imprimer</button>
+                            <button class="btn" id="imprimer" ><i class="bi bi-printer mr-1"></i>Imprimer</button>
                             <button class="btn"><i class="bi bi-download mr-1"></i>Sauvgarder</button>
                             <button class="btn verifier" type="submit"><i class="bi bi-check mr-1"></i>verifier</button>
                         </div>
@@ -120,7 +118,7 @@
 
                         <div class="mt-2 border border-light rounded-2 bg-white d-flex justify-content-between " >
 
-                            <p class="m-1"><i class="bi bi-lungs" ></i> Dommages rénaux</p>
+                            <p class="m-1"><i class="bi bi-lungs" ></i> Insuffisance Renale</p>
                             <div class=" btn-group-toggle m-1 " data-toggle="buttons">
                                 <label class="btn btn-sm active">
                                   <input type="radio" name="options-InsufisanceRenale" id="non-InsufisanceRenale" autocomplete="off" checked>  Non
@@ -133,7 +131,7 @@
                         </div>
                         <div class="mt-2 border border-light rounded-2 bg-white d-flex justify-content-between " >
 
-                            <p class="m-1"><i class="bi bi-lungs"></i> Lésions hépatiques</p>
+                            <p class="m-1"><i class="bi bi-lungs"></i> Insuffisance hépatique</p>
                             <div class=" btn-group-toggle m-1 " data-toggle="buttons">
                                 <label class="btn btn-sm active">
                                   <input type="radio" name="options" id="oui" autocomplete="off" checked>  Non
@@ -173,52 +171,24 @@
                     
                         <div class="mt-2 border border-light rounded-2 bg-white d-flex justify-content-between " >
 
-                            <p class="m-1"><i class="bi bi-lungs"></i> Dommages pulmonaires</p>
+                            <p class="m-1"><i class="bi bi-lungs"></i> Cardiopathie </p>
                             <div class=" btn-group-toggle m-1 " data-toggle="buttons">
                                 <label class="btn btn-sm active">
-                                  <input type="radio" name="options" id="oui" autocomplete="off" checked>  Non
+                                  <input type="radio" name="options"  id="non-FibrillationAuriculaire" autocomplete="off" checked>  Non
                                 </label>
                                 <label class="btn btn-sm">
-                                  <input type="radio" name="options" id="non" autocomplete="off">    Oui
+                                  <input type="radio" name="options" id="oui-FibrillationAuriculaire" autocomplete="off">    Oui
                                 </label>
                             </div>
 
                         </div>
+                        <hr>
+                        <div class="card-body" style="text-align:centre;">
+                               <div> <center><img src="assets/images/dc.jpg"  width=50% height=40% style="margin-top: 0vh;" style="margin-bottom: 30vh;  margin-left:40%;" ></center></div> 
 
-                        <div class="card mt-2" >
-                            <div class="card-header">
-                                <i class="bi bi-plus-circle"> Autres Comobidités</i>
                             </div>
-                            <div class="card-body">
-                                <div class="input-group m-1 rounded-2">
-                                    <span class="input-group-text bg-white border-right-0"><i class="bi bi-search"></i></span>
-                                    <input type="text" class="form-control  border-left-0" placeholder="Asthme, mysthénie, dialyse..."><br>
-                                </div>
-                                <div class="input-group m-1 rounded-2">
-                                    <input  type="radio" name="options" id="pas">
-                                    <span class="ml-1">Pas d’autres comorbidités</span>
-                                
-                                </div>
-                             
-                            </div>
-                        </div>
-                        <div class="card mt-2" >
-                            <div class="card-header">
-                                <i class="bi bi-plus-circle"> Allergeis médicamenteuses</i>
-                            </div>
-                            <div class="card-body">
-                                <div class="input-group m-1 rounded-2">
-                                    <span class="input-group-text bg-white border-right-0"><i class="bi bi-search"></i></span>
-                                    <input type="text" class="form-control  border-left-0" placeholder="Amoxicilline..."><br>
-                                </div>
-                                <div class="input-group m-1 rounded-2">
-                                    <input  type="radio" name="options" id="pas">
-                                    <span class="ml-1">Aucune allergie connue</span>
-                                
-                                </div>
-                             
-                            </div>
-                        </div>
+                        
+                      
                     
                     </div>
                 </div>
@@ -235,16 +205,14 @@
         <button class="btn shadow-lg p-3 mb-5 bg-body rounded">Effets indésirables</button>
     </div>
 
-
-
     <div class="card text-center">
         <div class="card-header" style="background-color: #FFFFFF;">
        <h4 style="color:#003735;">Analyse des Interactions </h4>
        <br>
        <p>Remarque : les résultats que vous obtenez dépendent des informations que vous saisissez (médicaments et profil du patient)</p>
         </div>
+        <h2 style="text-align: center;margin-top:10px;">Les interactions médicamenteuses</h2>
         <div class="card-body interactions_container row" style="padding-bottom: 90px;">
-          
           <p class="card-text" style="text-align:centre;"><img src="assets\images\verified.png" width=10% height=50% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p>
           <p>Entrer au moins deux medicaments!!</p>
           <br>
@@ -254,8 +222,11 @@
           <br>
         
         </div>
+        <hr>
+        <h2 style="text-align: center;margin-top:10px;">Les interactions entre les médicaments et le terrain clinique </h2>
+        <div class="card-body Minteractions_container row" style="padding-bottom: 90px;">
+        </div>
       </div>
-      
       <script>
                   
                   $.ajaxSetup({
@@ -281,24 +252,18 @@
                               if (response.medicaments.length){
                                  resultBox.classList.add("active");
                                   for (let i = 0; i < response.medicaments.length; i++){
-                                    console.log(response.medicaments.length);
-                                      $(resultBox).append('<li onclick="addinputmed(event,prix = '+response.medicaments[i].prix+')" id ="'+response.medicaments[i].nom_comercial+'">'+response.medicaments[i].nom_comercial+'('+response.medicaments[i].nom_molecule+') </li>');
+                                    console.log(response.medicaments[i].REMB);
+                                      $(resultBox).append('<li onclick="addinputmed(event,prix = '+response.medicaments[i].prix+',REMB = '+response.medicaments[i].REMB+')" id ="'+response.medicaments[i].nom_comercial+'">'+response.medicaments[i].nom_comercial+'('+response.medicaments[i].nom_molecule+') </li>');
                                   }
                               }
                       }
                 });
               }
               });
-              $(".logout").click(function(e){
-                event.preventDefault();
-                       $.ajax({
-                          type:'Post',
-                          url:'/api/logout',
-                           success:function(response){
-                            window.localStorage.setItem('user',null);
+
+              $("#logout").click(function(e){
+                    window.localStorage.setItem('user',null);
                             window.location.href = '/';
-                          }
-                });
               });
               function scrollToElement(element) {
                  $('html, body').animate({
@@ -308,20 +273,23 @@
               $(".verifier").click(function(e){
                 e.preventDefault();
                 const interactions_container = document.querySelector(".interactions_container");
+                const Minteractions_container = document.querySelector(".Minteractions_container");
                 var Diabete = null;
                 var Grossesse = null;
                 var InsufisanceRenale = null;
+                var FibrillationAuriculaire  = null;
                 if( $('#oui-Diabete').is(':checked') )  Diabete = 1;
 
                 if( $('#oui-Grossesse').is(':checked') )  Grossesse = 1;
 
-                if( $('#oui-InsufisanceRenale').is(':checked') )  InsufisanceRenale = 1;
+                if( $('#oui-InsufisanceRenale').is(':checked') ) InsufisanceRenale = 1;
+                if( $('#oui-FibrillationAuriculaire').is(':checked')) FibrillationAuriculaire  = 1;
 
                 scrollToElement(interactions_container);
                 var meds = $('input[name="meds"]').map(function(){ 
                                   return this.value; 
                               }).get();
-
+                      var altr;
                               if($('.radio_button').is(':checked'))
                     console.log(meds);
                        $.ajax({
@@ -332,6 +300,7 @@
                              Diabete :Diabete,
                              Grossesse : Grossesse,
                              InsufisanceRenale : InsufisanceRenale,
+                             FibrillationAuriculaire : FibrillationAuriculaire,
                             },
                            success:function(response){
                             console.log(response);
@@ -341,17 +310,26 @@
                             }else{
                                 $(interactions_container).empty();
                               for(let i = 0 ; i < response.interactions.length; i++ ){
-                                $(interactions_container).append('<div class="card-body col-3 inter"> <p class="card-text" style="text-align:centre;"> <div class="container" style="flex-direction: column;  align-items: center;"> <h4>'+response.interactions[i].medicament1+' VS '+response.interactions[i].medicament2+'</h4> <p class="card-text" style="text-align:centre;"><img src="assets/images/x.png" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p> <h6>Attention !!! une interaction a été Detectée</h6> <br> <h6>Effet:</h6> <h6>'+response.interactions[i].effet+'</h6> </div>');
-                              }  
+                                $(interactions_container).append('<div class="card-body col-3 inter"> <p class="card-text" style="text-align:centre;"> <div class="container" style="flex-direction: column;  align-items: center;"> <h4>'+response.interactions[i].medicament1+' VS '+response.interactions[i].medicament2+'</h4> <p class="card-text" style="text-align:centre;"><img src="assets/images/x.png" width=10% height=10% style="margin-top: 15px;;" style="margin-bottom: 30vh;">.</p><h6>'+response.interactions[i].effet+'</h6> </div>');
+                                altr = response.interactions[i].alternatif;
+                              }
+                              $(interactions_container).append('<div style="margin-top: 50px;box-shadow: 0px 1px 5px rgb(0 0 0 / 10%); background-color:#16D854"><h2 style="text-decoration:bold;">alternative : </h2>  ANDOL (PARACETAMOL) 1000 mg <br> dose : un demi à 1 comprimé à 1000 mg par prise, à renouveler au bout de 6 à 8 heures.<br>Remboursable.<br>prix : 10 DH.</div>');  
                             }
                             if(response.Minteractions.length){
-                                console.log(response.Minteractions);
-                                
+                              $(Minteractions_container).empty();
+                              for(let i = 0 ; i < response.Minteractions.length; i++ ){
+                                $(Minteractions_container).append('<div class="card-body col-3 inter"> <p class="card-text" style="text-align:centre;"> <div class="container" style="flex-direction: column;  align-items: center;"> <h4>'+response.Minteractions[i].medicament+' VS '+response.Minteractions[i].maladie+'</h4> <p class="card-text" style="text-align:centre;"><img src="assets/images/x.png" width=10% height=10% style="margin-top: 15px;;" style="margin-bottom: 30vh;">.</p><h6>'+response.Minteractions[i].effet+'</h6> </div>');
+                              }
+                            }else{
+                              $(Minteractions_container).empty();
+                              $(Minteractions_container).append('<div class="card text-center" style="padding-bottom: 90px;"><div class="card-body"><p class="card-text" style="text-align:centre;"><div class="container" style="flex-direction: column;  align-items: center;"><h4></h4> <p class="card-text" style="text-align:centre;"><img src="assets/images/verfieecheck.jpg" width=10% height=10% style="margin-top: 10vh;" style="margin-bottom: 30vh;">.</p><h6>Aucune Interaction Detectée</h6></div></div>');
                             }
+                            
                           }
                 });
               });
-              function addinputmed(e,prix){
+
+              function addinputmed(e,prix,REMB){
                   const resultBox = document.querySelector(".resultBox");
                   $('#search').val('');
                   resultBox.classList.remove("active");
@@ -360,8 +338,10 @@
                   if (selected_meds.contains(ord_vide)) {
                     $(selected_meds).empty();
                   }
+                  console.log(REMB);
                   const med = e.target.id;
-                  $(selected_meds).append('<div class="alert mx-auto mt-3" style="background-color: aliceblue; width: 60%;" id='+med+'><span style="font-weight:bold;">'+med+'   </span><input type="hidden" class="med" value="'+med+'" name="meds"><i class="bi bi-trash ml-1 delete" onclick="delet(event)"></i><br>'+prix+' DH</div>');
+                  if(REMB == 1) $(selected_meds).append('<div class="alert mx-auto mt-3" style="background-color: aliceblue; width: 60%;" id='+med+'><span style="font-weight:bold;">'+med+'   </span><input type="hidden" class="med" value="'+med+'" name="meds"><i class="bi bi-trash ml-1 delete" onclick="delet(event)"></i><br><span>'+prix+' DH /</span><span>       Remboursable : oui </span></div>');
+                  else  $(selected_meds).append('<div class="alert mx-auto mt-3" style="background-color: aliceblue; width: 60%;" id='+med+'><span style="font-weight:bold;">'+med+'   </span><input type="hidden" class="med" value="'+med+'" name="meds"><i class="bi bi-trash ml-1 delete" onclick="delet(event)"></i><br><span>'+prix+' DH /</span><span>       Remboursable : non </span></div>');
               }
               function delet(e){
                 const selected_meds = document.querySelector(".selected_meds");
@@ -379,15 +359,18 @@
               });
               function userinit(){
                 const userspan = document.querySelector("#user");
+                const dropdown = document.querySelector(".dropdown");
                 var user = JSON.parse(window.localStorage.getItem('user'));
                 if(!user) {
                   window.location.replace('/login');
                 }
                 $("#user").append('<span>'+user.nom+'</span>');
+                $(dropdown).prepend('<img src="assets/images/cab.png" alt="logo" style="border-radius: 50%;width: 50px;margin-left: 300px;">');
               }
               window.addEventListener('load', function() {
                 userinit();
               });
+
               </script>
 </body>
 </html>

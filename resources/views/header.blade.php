@@ -5,7 +5,7 @@
             </div>
 
             <ul>
-                <li><a href="/">Pillula Plateforme</a></li>
+                <li><a href="/">PILLia Plateforme</a></li>
                 <li><a href="">A propos</a></li>
                 <li><a href="">Nos Contacter</a></li>
             </ul>

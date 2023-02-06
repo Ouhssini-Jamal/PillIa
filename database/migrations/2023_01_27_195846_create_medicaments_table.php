@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('medicament1');
             $table->string('medicament2');
             $table->string('gravite');
+            $table->string('alternatif');
             $table->string('effet');
             $table->foreign('medicament1')->references('nom_comercial')->on('medicaments')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('medicament2')->references('nom_comercial')->on('medicaments')->onUpdate('cascade')->onDelete('cascade');;

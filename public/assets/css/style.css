@@ -503,6 +503,13 @@ box-shadow: 2px 2px 44px 7px rgba(0,0,0,0.46);
   width: 100%;
   display: flex;
 }
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
 .covic-text{
   width: 50%;
 }
@@ -541,7 +548,7 @@ box-shadow: 2px 2px 44px 7px rgba(0,0,0,0.46);
 }
 footer{
   width: 100%;
-  background-color: #003753;
+  background-color: #f4e0dc;
   padding-top: 30px;
  
 }
@@ -664,10 +671,15 @@ margin-bottom: 20px;
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
     z-index: 1;
+    right: 1px;
+    /* margin-top: -15px; */
+    background-color: aliceblue;
+    border-radius: 10px
+px
+;
   }
   
   .dropdown-content a {
@@ -683,3 +695,9 @@ margin-bottom: 20px;
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+body{
+  background-image: url(assets/images/vid.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -150px;
+}
