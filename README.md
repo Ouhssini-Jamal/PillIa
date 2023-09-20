@@ -6,7 +6,7 @@ The Intelligent Prescription Platform for Doctors is a comprehensive tool design
 
 ## Key Features
 
-- **Medication Interaction Analysis**: The platform performs real-time analysis of prescribed medications to identify and flag potential interactions, including drug-drug interactions, drug-food interactions, and drug-allergy interactions.
+- **Medication Interaction Analysis**: The platform performs real-time analysis of prescribed medications to identify and flag potential interactions, including drug-drug interactions, and drug-Chronic Disease interactions.
 
 - **Chronic Disease Integration**: It takes into account the patient's chronic diseases and adjusts medication recommendations accordingly, ensuring that prescriptions align with the patient's medical history.
 
