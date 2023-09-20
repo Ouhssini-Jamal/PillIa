@@ -13,12 +13,8 @@ The Intelligent Prescription Platform for Doctors is a comprehensive tool design
 - **Real-time Alerts**: Doctors receive immediate alerts and warnings if potentially dangerous interactions are identified between the prescribed medications or if there's a conflict with the patient's chronic diseases.
 
 - **Comprehensive Medication Database**: The platform maintains an extensive and up-to-date medication database, including detailed information on properties, side effects, and known interactions.
-
-- **Patient Profiles**: Doctors can create and manage patient profiles, allowing for a comprehensive overview of the patient's medical history, chronic diseases, and medication history.
-
+  
 - **Customized Recommendations**: Based on the patient's medical history, prescribed medications, and chronic diseases, the platform provides tailored recommendations for alternative medications or dosage adjustments when necessary.
-
-- **Secure and Compliant**: The platform prioritizes the security and privacy of patient data, ensuring compliance with healthcare regulations and data protection standards.
 
 ## Getting Started
 
