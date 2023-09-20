@@ -33,6 +33,20 @@ The Intelligent Prescription Platform for Doctors is a comprehensive tool design
 5. **Review and Confirm**: Review the medication interaction and chronic disease report, make necessary adjustments, and confirm the prescription.
 
 6. **Generate Prescription**: Once the prescription is confirmed, the platform can generate a printable prescription for the patient.
+   
+## Technologies Used
+
+- **Frontend**:
+  - HTML
+  - CSS/Bootstrap: For responsive and user-friendly interface design.
+  - JavaScript: For dynamic and interactive features.
+  - Ajax: For asynchronous data retrieval and real-time updates.
+
+- **Backend**:
+  - Laravel REST API: The backend is powered by the Laravel framework, providing a robust and secure API for data processing and communication.
+
+- **Database**:
+  - MySQL
 
 
 ## Disclaimer
